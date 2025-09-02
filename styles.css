@@ -23,7 +23,7 @@ body{margin:0; font-family: Montserrat, system-ui, -apple-system, Segoe UI, Robo
 .h3{font-weight:800; margin:.2rem 0}
 .kicker{letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; color:var(--mut)}
 .btn{display:inline-block; padding:.9rem 1.2rem; border-radius:14px; text-decoration:none; font-weight:700}
-.btn-fill{background:var(--txt); color:#0b2b2d}
+.btn-fill{background:var(--mut); color:#0b2b2d}
 .btn-ghost{border:1px solid #3a3a3a; color:var(--txt)}
 .grid{display:grid; gap:1rem}
 .grid-2{grid-template-columns:1fr}
