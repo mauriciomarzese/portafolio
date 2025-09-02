@@ -1,0 +1,97 @@
+:root{
+  --bg:#1e1e1e;       /* fondo */
+  --pri:#5ce1e6;      /* principal */
+  --txt:#e9f7f8;      /* texto */
+  --mut:#a7dfe2;      /* texto suave */
+  --card:#242424;     /* bloques */
+  --ring: rgba(92,225,230,.28);
+  --grad: linear-gradient(135deg, #5ce1e6 0%, #51c7cb 40%, #46aeb1 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{height:100%}
+body{margin:0; font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif; background:var(--bg); color:var(--txt)}
+
+/* Extenda 60 Giga (opcional: agregá tus archivos y descomentá)
+@font-face{font-family:'Extenda60Giga'; src:url('./fonts/Extenda-60Giga.woff2') format('woff2'); font-weight:900; font-style:normal; font-display:swap}
+.display{font-family:Extenda60Giga, Montserrat, sans-serif}
+*/
+
+.container{max-width:1152px; margin-inline:auto; padding-inline:1rem}
+.section{padding:72px 0}
+.title{font-weight:900; font-size:clamp(1.5rem, 2.5vw, 2.25rem)}
+.h3{font-weight:800; margin:.2rem 0}
+.kicker{letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; color:var(--mut)}
+.btn{display:inline-block; padding:.9rem 1.2rem; border-radius:14px; text-decoration:none; font-weight:700}
+.btn-fill{background:var(--pri); color:#0b2b2d}
+.btn-ghost{border:1px solid #3a3a3a; color:var(--txt)}
+.grid{display:grid; gap:1rem}
+.grid-2{grid-template-columns:1fr}
+.grid-3{grid-template-columns:1fr}
+.top-gap{margin-top:1rem}
+@media(min-width:900px){
+  .grid-2{grid-template-columns:1.1fr .9fr}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+}
+
+/* NAVBAR */
+.nav{position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(30,30,30,.7); border-bottom:1px solid #2a2a2a; z-index:20}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:900; letter-spacing:.02em}
+.brand .logo{width:36px; aspect-ratio:1; border-radius:10px; background:var(--grad)}
+.brand-accent{color:var(--pri)}
+.nav a{color:var(--mut); text-decoration:none; font-weight:600; font-size:.95rem}
+.nav a:hover{color:var(--pri)}
+.nav-links{display:none; gap:1rem}
+.nav-cta{display:none}
+.burger{background:none; border:none; color:var(--txt); font-size:1.6rem}
+@media(min-width:900px){
+  .nav-links{display:flex}
+  .nav-cta{display:flex; gap:.6rem}
+  .burger{display:none}
+}
+.mobile{display:none}
+.mobile.open{display:block; border-top:1px solid #2a2a2a}
+.mobile a{display:block; padding:1rem 0; border-bottom:1px solid #2a2a2a; color:var(--mut)}
+.mobile a:hover{color:var(--pri)}
+
+/* HERO */
+.hero{padding:96px 0}
+.hero h1{font-size:clamp(2.2rem, 6vw, 5rem); line-height:.95; font-weight:900; text-transform:uppercase}
+.hero .accent{color:var(--pri)}
+.hero .fade{opacity:.85}
+.hero .badge{display:inline-block; padding:.35rem .7rem; border-radius:999px; border:1px solid #334; color:var(--mut); font-size:.85rem; letter-spacing:.2em}
+.hero .panel{border:1px solid #2f2f2f; border-radius:22px; padding:1rem; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.08)); box-shadow: 0 0 0 6px var(--ring)}
+.hero .actions{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:14px}
+.tags{display:flex; gap:.5rem; flex-wrap:wrap; margin:10px 0 16px}
+#foto-mauri{width:100%; border-radius:16px; object-fit:cover; height: 50%;}
+.tag{padding:.45rem .75rem; border-radius:999px; border:1px solid #2f2f2f; color:var(--mut); font-weight:600; font-size:.85rem}
+
+/* Cards */
+.card{background:var(--card); border:1px solid #2b2b2b; border-radius:18px; padding:1rem}
+.card h4{margin:.2rem 0 0; font-size:1.05rem}
+.card p{margin:.3rem 0; color:var(--mut)}
+.list{margin:.5rem 0 0; padding-left:1.1rem}
+.list li{margin:.35rem 0}
+
+/* Projects */
+.projects .grid{gap:1.1rem}
+.case{background:#1b1b1b; border:1px solid #2b2b2b; border-radius:16px; padding:1rem; margin:.8rem 0}
+.case header{display:flex; align-items:center; justify-content:space-between; gap:.6rem}
+.case .link{color:var(--pri)}
+
+/* Cards genéricas para grillas por categoría */
+.item{display:flex; flex-direction:column; gap:.4rem; background:#222; border:1px solid #2e2e2e; border-radius:16px; padding:1rem}
+.item .title-sm{font-weight:800}
+.item .meta{font-size:.85rem; color:var(--mut)}
+.item a{color:var(--pri); text-decoration:none}
+.item a:hover{text-decoration:underline}
+
+/* Contacto */
+.contact .panel{background:#1a1a1a; border:1px solid #2c2c2c; border-radius:16px; padding:1.25rem}
+.contact .item{display:flex; align-items:center; gap:.75rem; padding:.8rem 0}
+.contact .item svg{width:22px; height:22px; color:var(--pri)}
+.link{color:var(--pri); text-decoration:none}
+.link:hover{text-decoration:underline}
+
+footer{border-top:1px solid #2a2a2a; color:var(--mut); padding:36px 0; text-align:center}
